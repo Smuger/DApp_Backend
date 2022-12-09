@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "rss-parser": "^3.12.0"
+  },
+  "name": "sixoclocknewsrsssonos",
+  "version": "1.0.0",
+  "description": "Query RSS and return just mp3 because Sonos cannot handle the whole RSS xml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smuger/SixOClockNewsRSSSonos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smuger/SixOClockNewsRSSSonos/issues"
+  },
+  "homepage": "https://github.com/Smuger/SixOClockNewsRSSSonos#readme"
+}
