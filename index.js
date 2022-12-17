@@ -1,17 +1,20 @@
 const express = require('express')
-const app = express()
-const port = 3000
+const fileUpload = require('express-fileupload');
 
-let Parser = require('rss-parser');
-let parser = new Parser();
+const app = express()
+const port = 10000
+app.use(fileUpload());
 
 app.get('/', (req, res) => {
     (async () => {
-        let feed = await parser.parseURL('https://podcasts.files.bbci.co.uk/b006qjxt.rss');
-        res.send(feed.items[0].enclosure.url)
+        res.send("CONNECTED")
       })();
   
 })
+
+app.post('/dapp/backup', (req, res) => {
+  console.log(req.files); // the uploaded file object
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
